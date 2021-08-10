@@ -241,8 +241,8 @@ a {
   }
   .canciones {
     width: 85%;
-      padding: 2rem;
-  border-radius: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
   }
   .albumes__album:nth-child(1) .albumes__album--audio .canciones,
   .albumes__album:nth-child(2) .albumes__album--audio .canciones,
