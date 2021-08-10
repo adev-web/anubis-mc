@@ -1,0 +1,257 @@
+:root {
+  --fuenteprincipal: "Lemonada", cursive;
+  --negro: rgb(0, 0, 0);
+  --blanco: rgb(255, 255, 255);
+  --albumtres: rgb(255, 255, 255);
+  --albumdos: rgb(163, 0, 34);
+  --albumuno: rgb(231, 105, 29);
+  --fondo: rgb(22, 14, 88);
+  --boton: rgba(255, 255, 255, 0.75);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--fondo);
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+audio {
+  border-radius: 1rem;
+  width: 75%;
+  margin: 0 auto;
+  background-color: black;
+  transition: 0.3s;
+}
+
+audio:hover {
+  width: 100%;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: black;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  color: var(--titulo);
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+/*------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+                            REUTILIZACION
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+*/
+
+.sombra {
+  box-shadow: 0px 10px 25px -2px rgba(0, 0, 0, 0.5);
+}
+.degradado {
+  -webkit-animation: degradado 8s both;
+  animation: degradado 8s both;
+}
+@keyframes degradado {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+/*------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+                            navegacion
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+*/
+.background {
+  width: 100%;
+  height: 100vh;
+  background-image: url(media/img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-principal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+.nav-principal__iconos {
+  background: var(--boton);
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.nav-principal__iconos h3 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .nav-principal__iconos {
+    width: 15rem;
+    height: 15rem;
+    transition: 0.35s;
+  }
+  .nav-principal__iconos:hover {
+    transform: scale(1.25);
+  }
+  .nav-principal__iconos h3 {
+    font-size: 1.5rem;
+  }
+}
+/*------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+                            MAIN
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+*/
+.albumes {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 5rem auto;
+}
+.albumes__album--audio,
+.albumes__album--imagen {
+  padding: 0.5rem;
+  width: 100%;
+  transition: 0.3s;
+}
+.albumes__album--imagen:hover,
+.albumes__album--audio:hover {
+  transform: scale(1.1);
+}
+.albumes__album:nth-child(1) .albumes__album--audio {
+  background-color: var(--albumuno);
+  border-radius: 1rem;
+}
+
+.albumes__album:nth-child(2) .albumes__album--audio {
+  background-color: var(--albumdos);
+  border-radius: 1rem;
+}
+
+.albumes__album:nth-child(3) .albumes__album--audio {
+  background-color: var(--albumtres);
+  border-radius: 1rem;
+}
+
+.canciones {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .albumes {
+    width: 85%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .albumes__album {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    margin: 2.5rem auto;
+  }
+  .albumes__album:nth-child(1) .albumes__album--audio,
+  .albumes__album:nth-child(2) .albumes__album--audio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .albumes__album:nth-child(3) .albumes__album--audio {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  .canciones {
+    width: 85%;
+  }
+  .albumes__album:nth-child(1) .albumes__album--audio .canciones,
+  .albumes__album:nth-child(2) .albumes__album--audio .canciones,
+  .albumes__album:nth-child(3) .albumes__album--audio .canciones {
+    margin: auto;
+  }
+} /* cierra mediaquery */
+/*------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+                            FOOTER
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+*/
+
+footer {
+  color: var(--blanco);
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+@media (min-width: 801px) {
+  footer {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer p {
+    text-transform: uppercase;
+  }
+}
