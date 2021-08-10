@@ -220,6 +220,7 @@ a {
     width: 85%;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    margin: 5rem auto 2.5rem auto;
   }
   .albumes__album {
     width: 90%;
