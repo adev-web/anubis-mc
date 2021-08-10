@@ -108,11 +108,39 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  justify-content: space-evenly;
+}
+.nav-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.nav-principal__iconos {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--boton);
+  border-radius: 50%;
+}
+
+@media (min-width: 801px) {
+  .background {
+  width: 100%;
+  height: 100vh;
+  background-image: url(media/img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 }
-.nav-principal {
+  .nav-principal {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -132,11 +160,6 @@ a {
   border-radius: 50%;
   transition: 0.3s;
 }
-.nav-principal__iconos h3 {
-  font-size: 1.5rem;
-}
-
-@media (min-width: 768px) {
   .nav-principal__iconos {
     width: 15rem;
     height: 15rem;
@@ -169,8 +192,8 @@ a {
   width: 100%;
   transition: 0.3s;
 }
-.albumes__album--imagen:hover,
-.albumes__album--audio:hover {
+.albumes__album--imagen:active,
+.albumes__album--audio:active {
   transform: scale(1.1);
 }
 .albumes__album:nth-child(1) .albumes__album--audio {
@@ -195,7 +218,7 @@ a {
   border-radius: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 801px) {
   .albumes {
     width: 85%;
     display: grid;
