@@ -24,9 +24,8 @@ img {
 
 audio {
   border-radius: 1rem;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
-  background-color: black;
   transition: 0.3s;
 }
 
@@ -46,7 +45,6 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  color: black;
   text-transform: uppercase;
 }
 
@@ -60,6 +58,7 @@ h1,
 h2,
 h3 {
   text-align: center;
+  color: var(--negro);
 }
 
 p {
@@ -214,8 +213,6 @@ a {
 .canciones {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  border-radius: 1rem;
 }
 
 @media (min-width: 801px) {
@@ -244,6 +241,8 @@ a {
   }
   .canciones {
     width: 85%;
+      padding: 2rem;
+  border-radius: 1rem;
   }
   .albumes__album:nth-child(1) .albumes__album--audio .canciones,
   .albumes__album:nth-child(2) .albumes__album--audio .canciones,
