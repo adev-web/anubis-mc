@@ -1,2 +1,2 @@
 # Anubis-MC
-https://ajov.developer.github.io/anubis-mc
+https://ajov-developer.github.io/anubis-mc
