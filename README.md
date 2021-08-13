@@ -1,2 +1,2 @@
 # Anubis-MC
-https://alessandro0330.github.io/Anubis-MC/
+https://desarrollo-web0330.github.io/anubis-mc
